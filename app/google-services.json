@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "800426939968",
+    "firebase_url": "https://blinkit-clone-96496-default-rtdb.firebaseio.com",
+    "project_id": "blinkit-clone-96496",
+    "storage_bucket": "blinkit-clone-96496.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:800426939968:android:2a8d472ce0dc0fe3d0b1a5",
+        "android_client_info": {
+          "package_name": "com.madhavsolanki.userblinkit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtX1vAAwyyT-1tp8Xiy1X3CexZH6SUtX8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
