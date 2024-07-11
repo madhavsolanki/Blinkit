@@ -1,6 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    // Add the Google services Gradle plugin
+    id("com.google.gms.google-services")
+
     id("kotlin-kapt")
 }
 
@@ -63,10 +66,10 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.0")
 
     // Import the Firebase BoM
-    implementation(platform("com.google.firebase:firebase-bom:33.0.0"))
+    implementation(platform("com.google.firebase:firebase-bom:33.1.1"))
     implementation("com.google.firebase:firebase-analytics")
     implementation ("com.google.firebase:firebase-auth-ktx")
-    implementation("com.google.android.gms:play-services-auth-api-phone:18.0.2")
+    implementation("com.google.android.gms:play-services-auth-api-phone:18.1.0")
     //noinspection UseTomlInstead
     implementation ("com.google.android.gms:play-services-auth:21.2.0")
     implementation("com.google.firebase:firebase-storage-ktx")

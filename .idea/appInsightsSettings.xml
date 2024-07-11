@@ -9,9 +9,9 @@
               <option name="connection">
                 <ConnectionSetting>
                   <option name="appId" value="com.madhavsolanki.userblinkit" />
-                  <option name="mobileSdkAppId" value="1:800426939968:android:2a8d472ce0dc0fe3d0b1a5" />
-                  <option name="projectId" value="blinkit-clone-96496" />
-                  <option name="projectNumber" value="800426939968" />
+                  <option name="mobileSdkAppId" value="1:1082179108463:android:7dbfe91487f826ee97d79a" />
+                  <option name="projectId" value="blink-it-clone-6d8ff" />
+                  <option name="projectNumber" value="1082179108463" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
