@@ -1,4 +1,4 @@
-package com.madhavsolanki.userblinkit
+package com.madhavsolanki.userblinkit.fragments
 
 import android.os.Build
 import android.os.Bundle
@@ -7,6 +7,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import androidx.navigation.fragment.findNavController
+import com.madhavsolanki.userblinkit.Constants
+import com.madhavsolanki.userblinkit.R
 import com.madhavsolanki.userblinkit.adapters.AdapterCategory
 import com.madhavsolanki.userblinkit.databinding.FragmentHomeBinding
 import com.madhavsolanki.userblinkit.models.Category
@@ -14,6 +17,7 @@ import com.madhavsolanki.userblinkit.models.Category
 class HomeFragment : Fragment() {
 
     private lateinit var binding:FragmentHomeBinding
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -24,9 +28,20 @@ class HomeFragment : Fragment() {
 
         setAllCategories()
 
-
+        navigatingToSearchFragment()
         return binding.root
     }
+
+    private fun navigatingToSearchFragment() {
+        binding.searchCv.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_searchFragment)
+        }
+
+        binding.searchTv.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_searchFragment)
+        }
+    }
+
 
     private fun setAllCategories() {
         val categoryList = ArrayList<Category>()
@@ -35,7 +50,17 @@ class HomeFragment : Fragment() {
             categoryList.add(Category(title =  Constants.allProductsCategory[i], image = Constants.allProductsCategoryIcon[i]))
         }
 
-        binding.rvCategories.adapter = AdapterCategory(categoryList)
+        binding.rvCategories.adapter = AdapterCategory(categoryList, :: onCategoryIconClicked)
+
+    }
+
+    fun onCategoryIconClicked(category: Category){
+        val bundle = Bundle()
+        bundle.putString("category",category.title)
+        findNavController().navigate(R.id.action_homeFragment_to_categoryFragment, bundle)
+    }
+
+    private fun getCategoryProduct(title: String?) {
 
     }
 

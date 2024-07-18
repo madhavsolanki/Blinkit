@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment">
+    tools:context=".fragments.HomeFragment">
 
 
     <com.google.android.material.appbar.AppBarLayout
@@ -51,13 +51,14 @@
                     app:layout_collapseMode="pin">
 
                     <TextView
-                        android:id="@+id/searchEt"
-                        android:layout_width="match_parent"
+                        android:id="@+id/searchTv"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
+                        android:layout_marginTop="2dp"
                         android:background="@android:color/transparent"
                         android:drawablePadding="10dp"
                         android:hint="Search"
+                        android:textAlignment="textStart"
                         android:padding="10dp"
                         android:textColorHint="@color/black"
                         android:textSize="@dimen/_15sdp"
