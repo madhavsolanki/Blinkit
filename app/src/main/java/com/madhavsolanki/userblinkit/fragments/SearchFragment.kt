@@ -13,6 +13,7 @@ import androidx.navigation.fragment.findNavController
 import com.madhavsolanki.userblinkit.R
 import com.madhavsolanki.userblinkit.adapters.AdapterProduct
 import com.madhavsolanki.userblinkit.databinding.FragmentSearchBinding
+import com.madhavsolanki.userblinkit.databinding.ItemViewProductBinding
 import com.madhavsolanki.userblinkit.models.Product
 import com.madhavsolanki.userblinkit.viewmodels.UserViewModel
 import kotlinx.coroutines.launch
@@ -74,7 +75,7 @@ class SearchFragment : Fragment() {
                     binding.rvProducts.visibility = View.VISIBLE
                     binding.tvText.visibility = View.GONE
 
-                    adapterProduct = AdapterProduct(::onAddProductClicked)
+                    adapterProduct = AdapterProduct(::onAddButtonClicked)
                     binding.rvProducts.adapter = adapterProduct
                     adapterProduct.differ.submitList(it)
                     adapterProduct.originalList = it as ArrayList<Product>
@@ -84,4 +85,9 @@ class SearchFragment : Fragment() {
         }
     }
 
+    private fun onAddButtonClicked(product: Product, productBinding: ItemViewProductBinding){
+        productBinding.tvAdd.visibility = View.GONE
+
+        productBinding.llProductCount.visibility = View.VISIBLE
+    }
 }
