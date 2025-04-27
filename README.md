@@ -1,4 +1,4 @@
-# 📦 Blinkit Clone – Grocery Delivery App  
+# 📦 Zinger – Grocery Delivery App  
 
 A grocery delivery app built with **Kotlin and XML**, featuring separate **Admin and User** apps. Includes **payment integration** for a seamless shopping experience.
 
